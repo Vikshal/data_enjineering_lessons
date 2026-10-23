@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Кофе",
+        "price": 2000,
+        "category": "Продукты",
+        "in_stock": true,
+        "sku": 123
+    },
+    {
+        "name": "Смартфон",
+        "price": 35000,
+        "category": "Электроника",
+        "in_stock": true,
+        "sku": 122
+    },
+    {
+        "name": "Сахар",
+        "price": 60,
+        "category": "Продукты",
+        "in_stock": false,
+        "sku": 124
+    },
+    {
+        "name": "Планшет",
+        "price": 40000,
+        "category": "Электроника",
+        "in_stock": true,
+        "sku": 111
+    },
+    {
+        "name": "Микроволновка",
+        "price": 12000,
+        "category": "Электроника",
+        "in_stock": false,
+        "sku": 113
+    }
+]
