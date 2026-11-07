@@ -125,3 +125,25 @@ with open("map.png", "wb") as file:
 Файл map.png будет создан в той же папке, где находится программа. В нём окажется изображение нужного участка карты, сгенерированное сервером по указанным координатам и параметрам.
 """
 
+# import requests
+
+# try:
+#     response = requests.get("https://google.com", timeout=10)
+#     response.raise_for_status()
+
+#     print(response.text[:100])
+#     print(response.content[:100])
+#     print(response.status_code)
+#     print(response.url)
+
+#     try:
+#         print(response.json())
+#     except requests.exceptions.JSONDecodeError:
+#         print("Error decoding json")
+
+#     print(response.ok)
+# except requests.exceptions.Timeout:
+#     print("timeout")
+
+
+
