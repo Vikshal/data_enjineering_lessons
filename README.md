@@ -17,4 +17,7 @@
 1) Python: OOP
 2) Форматы файлов (JSON, CSV, YAML)
 3) API, requests, get
+4) Linux
+5) Docker
+6) Airflow
 .......
