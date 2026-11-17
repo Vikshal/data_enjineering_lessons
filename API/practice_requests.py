@@ -86,3 +86,42 @@
 #             print("128")
 #             file.write(chunk)
 
+# import requests
+# import pandas as pd
+
+# data = []
+
+# try:
+#     response = requests.get('https://jsonplaceholder.typicode.com/posts', timeout=10)
+#     response.raise_for_status()
+#     data = response.json()
+# except requests.exceptions.JSONDecodeError:
+#     print('JSONDecodeError')
+# except requests.exceptions.RequestException as e:
+#     print(e)
+
+# df = pd.DataFrame(data[:5])
+# print(df)
+
+''' Задание для практики. Посмотреть/прочитать, как работает requests + pandas для получения данных из API. Написать extract.py, который просто печатает первые 5 строк ответа. Использовать get, проработать ошибки и вывести результат в виде таблицы. API: 'https://jsonplaceholder.typicode.com/posts' '''
+
+import requests
+import pandas as pd
+
+
+def extract(url: str, timeout: int = 10) -> pd.DataFrame:
+    data = []
+    try:
+        response = requests.get(url, timeout=timeout)
+        response.raise_for_status()
+        data = response.json()
+    except requests.exceptions.JSONDecodeError:
+        print('JSONDecodeError')
+    except requests.exceptions.RequestException as e:
+        print(f'Ошибка: {e}')
+
+    return pd.DataFrame(data[:5])
+
+
+if __name__ == '__main__':
+    print(extract('https://jsonplaceholder.typicode.com/posts'))
