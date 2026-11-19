@@ -103,13 +103,13 @@
 # df = pd.DataFrame(data[:5])
 # print(df)
 
-''' Задание для практики. Посмотреть/прочитать, как работает requests + pandas для получения данных из API. Написать extract.py, который просто печатает первые 5 строк ответа. Использовать get, проработать ошибки и вывести результат в виде таблицы. API: 'https://jsonplaceholder.typicode.com/posts' '''
+''' Задание для практики. Посмотреть/прочитать, как работает requests + pandas для получения данных из API. Написать extract.py, который просто печатает первые 5 строк ответа. Использовать get, проработать ошибки и вывести результат в виде таблицы. API: 'https://jsonplaceholder.typicode.com/posts' Сохранить таблицу в файл extract.csv '''
 
 import requests
 import pandas as pd
 
 
-def extract(url: str, timeout: int = 10) -> pd.DataFrame:
+def extract(url: str, timeout: int = 30) -> pd.DataFrame:
     data = []
     try:
         response = requests.get(url, timeout=timeout)
@@ -123,5 +123,24 @@ def extract(url: str, timeout: int = 10) -> pd.DataFrame:
     return pd.DataFrame(data[:5])
 
 
+def save_to_csv(df: pd.DataFrame, path:str) -> None:
+    if df.empty:
+        print('no data')
+        return
+    try:
+        df.to_csv(path, index=False, encoding="utf-8")
+        print(f'{len(df)} lines saved to {path} successful')
+    except PermissionError:
+        print("no access to the folder")
+    except OSError as e:
+        print(f"system error {e}")
+
+
 if __name__ == '__main__':
-    print(extract('https://jsonplaceholder.typicode.com/posts'))
+    df = extract('https://jsonplaceholder.typicode.com/posts')
+    print(df)
+    save_to_csv(df, "extract.csv")
+
+
+
+

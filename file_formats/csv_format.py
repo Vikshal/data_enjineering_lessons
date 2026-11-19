@@ -43,26 +43,35 @@ df1.to_csv("pandas_csv_file.csv", index=False) # сохраняем таблиц
 
 """
 
-import pandas as pd
+# import pandas as pd
 
-l_connections = [
-    {
-        "user_name": "etl_user",
-        "password": "123"
+# l_connections = [
+#     {
+#         "user_name": "etl_user",
+#         "password": "123"
 
-    } ,
-    {
-        "user_name": "test_user",
-        "password": "456"
-    } 
-]
+#     } ,
+#     {
+#         "user_name": "test_user",
+#         "password": "456"
+#     } 
+# ]
 
-df1 = pd.DataFrame(l_connections)
-print(df1)
-print(type(df1))
+# df1 = pd.DataFrame(l_connections)
+# print(df1)
+# print(type(df1))
 
-df1.to_csv("pandas_csv_file.csv", index=False) # сохраняем таблицу в файл pandas_csv_file.csv без индексов
+# df1.to_csv("pandas_csv_file.csv", index=False) # сохраняем таблицу в файл pandas_csv_file.csv без индексов
 
-df2 = pd.read_csv("pandas_csv_file.csv")
-print(df2)
-print(type(df2))
+# df2 = pd.read_csv("pandas_csv_file.csv")
+# print(df2)
+# print(type(df2))
+
+#Давайте откроем и прочитаем csv файл. Скрипт я взяла из документации csv и изменила названия под свои
+# import csv
+# with open('extract.csv', newline='') as csvfile:
+#     reader = csv.DictReader(csvfile)
+#     for row in reader:
+#         print(f"{row['userId']}, {row['id']}, {row['title']}, {row['body']}")
+
+
