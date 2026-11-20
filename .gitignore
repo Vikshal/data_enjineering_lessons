@@ -1,0 +1,96 @@
+# ===== Виртуальные окружения =====
+venv/
+.venv/
+env/
+ENV/
+*.egg-info/
+.eggs/
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+.eggs/
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# ===== Секреты и конфиги =====
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets.yaml
+secrets.yml
+config.local.*
+credentials.json
+service-account*.json
+
+# ===== Данные  =====
+data/
+!data/.gitkeep
+*.csv
+*.tsv
+*.parquet
+*.avro
+*.orc
+*.jsonl
+*.xlsx
+*.xls
+*.db
+*.sqlite
+*.sqlite3
+*.dump
+*.bak
+extract.csv
+
+# ===== Логи и временные файлы =====
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.swp
+*.swo
+
+# ===== Jupyter =====
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ===== IDE и редакторы =====
+.idea/
+.vscode/
+!.vscode/settings.json.example
+*.sublime-project
+*.sublime-workspace
+
+# ===== ОС =====
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ===== Airflow / dbt  =====
+airflow.cfg
+airflow.db
+logs/airflow/
+dbt_packages/
+dbt_modules/
+target/
+profiles.yml
